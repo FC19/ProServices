@@ -1,24 +1,34 @@
 package Clases;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Prestador {
-    String nombre;
-    String apellido;
-    int cuil;
-    String tipoDocumento;
-    int numeroDocumento;
-    List<String> emails;
-    List<int> telefono;
-    DisponibilidadHoraria disponibilidadesHorarias;
+    private String nombre;
+    private String apellido;
+    private int cuil;
+    private tiposDeDocumentos tipoDocumento;
+    private int numeroDocumento;
+    private List<String> emails;
+    private List<Integer> telefono;
+    private List<DisponibilidadHoraria> disponibilidadesHorarias;
 
     public Prestador(){
+        this.emails= new ArrayList<>();
+        this.telefono=new ArrayList<>();
+        this.disponibilidadesHorarias=new ArrayList<>();
 
     }
-    public boolean aceptarTrabajo(){
 
+    public void setEmails(List<String> emails) {
+        this.emails = emails;
     }
 
+    public  void setTelefono(List<Integer> telefono){this.telefono = telefono;}
+
+    public void setDisponibilidadesHorarias(List<DisponibilidadHoraria> disponibilidadesHorarias) {
+        this.disponibilidadesHorarias = disponibilidadesHorarias;
+    }
 
     public String getNombre() {
         return nombre;
@@ -44,11 +54,11 @@ public class Prestador {
         this.cuil = cuil;
     }
 
-    public String getTipoDocumento() {
+    public tiposDeDocumentos getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(tiposDeDocumentos tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 
@@ -60,27 +70,14 @@ public class Prestador {
         this.numeroDocumento = numeroDocumento;
     }
 
-    public List<String> getEmailS() {
-        return emailS;
+    public List<String> getEmails() {
+        return emails;
     }
 
-    public void setEmailS(List<String> emailS) {
-        this.emailS = emailS;
-    }
-
-    public List<int> getTelefono() {
+    public List<Integer> getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(List<int> telefono) {
-        this.telefono = telefono;
-    }
+    public void cambiarReputacion(Reputacion reputacion){}
 
-    public DisponibilidadesHorarias getDisponibilidadesHorarias() {
-        return disponibilidadesHorarias;
-    }
-
-    public void setDisponibilidadesHorarias(DisponibilidadesHorarias disponibilidadesHorarias) {
-        this.disponibilidadesHorarias = disponibilidadesHorarias;
-    }
 }

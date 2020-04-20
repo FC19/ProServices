@@ -1,27 +1,36 @@
 package Clases;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Consumidor {
-    String nombre;
-    String apellido;
-    String tipoDocumento;
-    int numeroDocumento;
-    List<String> domicilios;
-    List<String> emailS;
-    List<int> telefono;
+    private String nombre;
+    private String apellido;
+    private String tipoDocumento;
+    private int numeroDocumento;
+    private List<String> domicilios;
+    private List<String> emails;
+    private List<Integer> telefono;
 
     public Consumidor(){
 
+        this.domicilios=new ArrayList<>();
+        this.emails= new ArrayList<>();
+        this.telefono=new ArrayList<>();
     }
-    public boolean contratar(){
-
+    public void contratar(){
+        estadoTrabajo contratado = estadoTrabajo.Iniciado;
     }
-    public String opinarTrabajoRealizado(){
-
+    public String opinarTrabajoRealizado(String o){
+        return opinarTrabajoRealizado(o);
     }
-    public int puntuarTrabajoRealizado(){
-
+    public void puntuarTrabajoRealizado(int i){
+           puntuarTrabajoRealizado(1);
+           puntuarTrabajoRealizado(2);
+           puntuarTrabajoRealizado(3);
+           puntuarTrabajoRealizado(4);
+           puntuarTrabajoRealizado(5);
     }
 
     public String getNombre() {
@@ -60,23 +69,19 @@ public class Consumidor {
         return domicilios;
     }
 
-    public void setDomicilios(List<String> domicilios) {
-        this.domicilios = domicilios;
+    public List<String> getEmails() {
+        return emails;
     }
 
-    public List<String> getEmailS() {
-        return emailS;
-    }
-
-    public void setEmailS(List<String> emailS) {
-        this.emailS = emailS;
-    }
-
-    public List<int> getTelefono() {
+    public List<Integer> getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(List<int> telefono) {
-        this.telefono = telefono;
+
+    public void agregartelefono(Integer telefono){
+        this.telefono.add(telefono);}
+
+    public void agregaremail(String ... emails){
+        Collections.addAll(this.emails);
     }
 }

@@ -1,22 +1,32 @@
 package Clases;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Trabajo {
-    Prestador prestador;
-    Consumidor consumidor;
-    List<Tarea> tareas;
-    LocalDate fecha;
-    int horario;
-    enum estado;
+    private Prestador prestador;
+    private Consumidor consumidor;
+    private List<Tarea> tareas;
+    private LocalDate fecha;
+    private double horario;
+    private estadoTrabajo estado;
 
     public Trabajo(){
-
+       this.tareas= new ArrayList<>();
+       this.estado= estadoTrabajo.NOIniciado;
     }
-    public String cambiarEstado(){
-
+    public void cambiarEstado(){
+        estadoTrabajo cambioDeEstado = estadoTrabajo.NOIniciado;
     }
+
+    public void agregarTarea(Tarea unaTarea){
+          this.tareas.add(unaTarea);
+    }
+    public void eliminarTarea(Tarea unaTarea){
+        this.tareas.remove(unaTarea);
+    }
+
     public Prestador getPrestador() {
         return prestador;
     }
@@ -37,9 +47,6 @@ public class Trabajo {
         return tareas;
     }
 
-    public void setTareas(List<Tarea> tareas) {
-        this.tareas = tareas;
-    }
 
     public LocalDate getFecha() {
         return fecha;
@@ -49,11 +56,11 @@ public class Trabajo {
         this.fecha = fecha;
     }
 
-    public int getHorario() {
+    public double getHorario() {
         return horario;
     }
 
-    public void setHorario(int horario) {
+    public void setHorario(double horario) {
         this.horario = horario;
     }
 }

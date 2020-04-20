@@ -3,9 +3,9 @@ package Clases;
 import java.util.List;
 
 public class Servicio {
-    String nombre;
-    String descripcion;
-    List<Tarea> tareas;
+    private String nombre;
+    private String descripcion;
+    private List<Tarea> tareas;
 
     public Servicio(){
 
@@ -27,7 +27,7 @@ public class Servicio {
         this.descripcion = descripcion;
     }
 
-    public List<Tareas> getTareas() {
+    public List<Tarea> getTareas() {
         return tareas;
     }
 

@@ -1,14 +1,13 @@
 package Clases;
 
 public class Tarea {
-    String nombre;
-    String descripcion;
+  private  String nombre;
+  private String descripcion;
 
     public Tarea(){
 
     }
-    public String actualizarDescripcion(){
-
+    public void actualizarDescripcion(String descripcion){
     }
 
     public String getNombre() {

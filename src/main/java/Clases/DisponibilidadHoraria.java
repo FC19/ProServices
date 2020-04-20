@@ -3,9 +3,9 @@ package Clases;
 import java.time.LocalDate;
 
 public class DisponibilidadHoraria {
-    LocalDate dia;
-    double horarioInicio;
-    double horarioFiin;
+   private LocalDate dia;
+    private double horarioInicio;
+    private double horarioFiin;
 
     public DisponibilidadHoraria(){
 
