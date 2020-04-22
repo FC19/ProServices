@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>App Service</title>
+</head>
+<body>
+
+	<form action="/provider" method="POST">
+		<div class="form-control">
+			<label>Name</label>
+			<input type="text" name="name" value="{{provider.name}}">
+		</div>
+		<div class="form-control">
+			<label>Lastname</label>
+			<input type="text" name="lastname" value="{{provider.lastName}}">
+		</div>
+		<div class="form-control">
+			<label>Number</label>
+			<input type="number" name="number" value="{{provider.numberOfDocument}}">
+		</div>
+
+		<button type="submit" class="btn btn-primary">Actualizar</button>
+	</form>
+
+</body>
+</html>

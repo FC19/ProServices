@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title>App Service</title>
+</head>
+<body>
+	<table class="table">
+		<thead>
+			<th>Id</th>
+			<th>Name</th>
+			<th>LAST NAME</th>
+			<th>Document number</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+			{{#each providers}}
+				<tr>
+					<td>{{id}}</td>
+					<td>{{name}}</td>
+					<td>{{lastName}}</td>
+					<td>{{numberOfDocument}}</td>
+					<td>
+						<a href="/provider/{{id}}">ENTRA ACÁ FORRO</a>
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</body>
+</html>
