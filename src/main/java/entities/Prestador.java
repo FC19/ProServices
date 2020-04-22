@@ -23,7 +23,7 @@ public class Prestador {
         this.numeroDocumento = numeroDocumento;
         this.emails = new ArrayList<String>();
         this.telefono = new ArrayList<Integer>();
-        this.disponibilidadesHorarias = new ArrayList<DisponibilidadHoraria>(); 
+        this.disponibilidadesHorarias = new ArrayList<DisponibilidadHoraria>();
     }
 
     public void setEmails(List<String> emails) {
@@ -85,5 +85,9 @@ public class Prestador {
     }
 
     public void cambiarReputacion(Reputacion reputacion){}
+
+    public void agregarDisponibilidadHoraria(DisponibilidadHoraria disponibilidadHoraria){
+        this.disponibilidadesHorarias.add(disponibilidadHoraria);
+    }
 
 }
